@@ -7,7 +7,8 @@
     <context:property-placeholder location="param-config.properties"/>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations" value="classpath:mappers/ClientsMapper.xml"/>
+        <!--<property name="mapperLocations" value="classpath:mappers/ClientsMapper.xml"/>-->
+        <!--resource 创建与接口相同的 文件夹结构 ，可以省略该句，spring能自动扫描到xml文件-->
     </bean>
     <bean destroy-method="close" id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="username" value="${jdbc.username}"/>
