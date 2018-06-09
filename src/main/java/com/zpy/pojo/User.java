@@ -1,5 +1,8 @@
 package com.zpy.pojo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
     public String client_name, client_code, client_id, client_address, client_telephone, client_spouse, spouse_id, spouse_telephone;
 
