@@ -3,8 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zpy.dao.ClientsMapper">
-    <select id="selectClient" resultType="hashMap">
+    <select id="selectClient"  resultType="hashMap">
       select * from clients where client_id=#{id}
     </select>
+
+    <insert id="insertUser" parameterType="com.zpy.pojo.User">
+        insert into clients values(#{client_name},#{client_code},#{client_id})
+    </insert>
 
 </mapper>
